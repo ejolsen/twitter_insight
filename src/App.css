@@ -1,0 +1,114 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 3%;
+    height: auto;
+    width: 100%;
+    background-color: rgb(22, 22, 22);
+}
+
+.App-title {
+    color: #dd219e;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.TwitInput-title {
+    color: white;
+    font-size: 30px;
+}
+
+.TwitInput-main {
+    height: 60px;
+    width: 300px;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: #dd219e solid 1px;
+    caret-color: #dd219e;
+}
+
+.input-at {
+    font-size: 30px;
+    color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border: #dd219e
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:  rgb(53, 53, 53);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #dd219e;
+    height: 100px;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #dd219e
+}
+
+
+::placeholder {
+    color: rgb(245, 245, 245);;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgb(245, 245, 245);;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgb(245, 245, 245);;
+}
+
+.AnalysisButton {
+    background-color: #dd219e;
+    margin: 50px;
+    outline: none;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(245, 245, 245);
+    font-size: 100%;
+
+}
+
+.user-profile-info {
+    background-color: #dd219e7e;
+    width: 90%;
+    height: 500px;
+    margin-bottom: 100px;
+}
+
+.user-twitter-handle-title {
+    color: #dd219e;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.app-tweets {
+    width: 90%;
+    height: auto;
+    color: rgb(84, 216, 22);
+    border-bottom: white 1px solid;
+    border-right: white 1px solid;
+    border-left: white 1px solid;
+    font-size: 18px;
+}
