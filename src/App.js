@@ -26,12 +26,15 @@ class App extends Component {
   // Initiates search and retrieval of user's Tweets.
   twitHandleSearch(screenName) {
     const SN = {sn: screenName};
-    axios.post(`/api/sn_search`, SN).then ( (res) => {
-      const profPicURL = res.data[0].user.profile_image_url 
-      this.setState({
-        userTweetData: res.data,
-      });
-      this.modifyProfPicURL(profPicURL);
+    axios.post(`/api/sn_search`, SN).then( (res) => {
+      console.log(res.data)
+      if(res.data === 'error') {
+        console.log("not a valid sn")
+      } else {const profPicURL = res.data[0].user.profile_image_url 
+        this.modifyProfPicURL(profPicURL);
+        this.setState({
+          userTweetData: res.data
+        })}
     });
   };
 

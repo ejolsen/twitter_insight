@@ -18,8 +18,12 @@ module.exports = {
         const twit = new twitter(twitter_config);
         const screen_name = req.body.sn
         twit.get(`statuses/user_timeline.json?count=100`, {screen_name: screen_name}, function(error, tweets, response) {
-            if(error) throw error;
-            res.status(200).send(tweets)
+            if (error) {
+                console.log(error);
+                res.send('error')
+            } else {
+                res.status(200).send(tweets);
+            }
         })
     }
 }
