@@ -61,7 +61,7 @@ class App extends Component {
         return (
           <div className='app-tweets' key={tweet.id}>
             <div>{tweet.text}</div>
-            <img src={tweet.entities.media[0].media_url} alt='tweet pic' height='50%' width='50%'/>
+            <img src={tweet.entities.media[0].media_url} alt='tweet pic' height='40%' width='40%'/>
           </div>
         )
       } 
@@ -80,7 +80,7 @@ class App extends Component {
           <AnalysisButton tweetSearch={this.twitHandleSearch} twitScreenName={this.state.twitHandle}/>
         </div>
         <div className='user-profile-info'>
-          <img src={picURL} alt='profile pic' height='100%'/>
+          <img src={picURL} alt='profile pic' height='80%'/>
         </div>
         { this.state.userTweetData[0] ? <div className='user-twitter-handle-title'>{`${this.state.twitHandle}'s Tweets`}</div> : null}
         {timeline_tweets}
