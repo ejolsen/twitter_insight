@@ -10,7 +10,8 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "watson-developer-cloud": "^3.15.0"
   },
   "scripts": {
     "start": "react-scripts start",
