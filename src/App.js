@@ -28,7 +28,7 @@ class App extends Component {
     const SN = {sn: screenName};
     axios.post(`/api/sn_search`, SN).then( (res) => {
       if(res.data === 'error') {
-        console.log("Error: Not a valid Twitter Handle")
+        console.log('Error: Not a valid Twitter Handle')
       } else {const profPicURL = res.data[0].user.profile_image_url 
         this.modifyProfPicURL(profPicURL);
         this.setState({

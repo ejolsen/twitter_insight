@@ -1,5 +1,6 @@
 require('dotenv').config();
 const twitter = require('twitter');
+const insight_api = require('./insight_ctrl')
 const {
     TWITTER_CONSUMER_KEY,
     TWITTER_SECRET_CONSUMER_KEY,
@@ -14,7 +15,7 @@ module.exports = {
             consumer_secret: TWITTER_SECRET_CONSUMER_KEY,
             access_token_key: TWITTER_ACCESS_TOKEN,
             access_token_secret: TWITTER_SECRET_ACCESS_TOKEN,
-        }
+        };
         const twit = new twitter(twitter_config);
         const screen_name = req.body.sn
         twit.get(`statuses/user_timeline.json?count=100`, {screen_name: screen_name}, function(error, tweets, response) {
@@ -23,7 +24,8 @@ module.exports = {
                 res.send('error')
             } else {
                 res.status(200).send(tweets);
+                insight_api.analyze_user_data(tweets);
             }
-        })
+        });
     }
 }
