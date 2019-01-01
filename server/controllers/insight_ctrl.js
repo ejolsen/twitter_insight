@@ -1,7 +1,12 @@
-const express = require('express');
 require('dotenv').config();
+const {
+    PERSONALITY_INSIGHTS_VERSION_DATE,
+    PERSONALITY_INSIGHTS_URL,
+    PERSONALITY_INSIGHTS_KEY
+} = process.env
 
 module.exports = { 
+    // Method analyzes and returns personality profile using IBM's Personality Insights service
     analyze_user_data: (tweets) => {
         let text_data = ''
         for(var i = 0; i < tweets.length; i++){
@@ -10,9 +15,9 @@ module.exports = {
         console.log(text_data)
         const PersonalityInsightsV3 =require('watson-developer-cloud/personality-insights/v3');
         const personality_insights = new PersonalityInsightsV3({
-            version_date: process.env.PERSONALITY_INSIGHTS_VERSION_DATE,
-            url: process.env.PERSONALITY_INSIGHTS_USERNAME,
-            iam_apikey: process.env.PERSONALITY_INSIGHTS_PASSWORD
+            version_date: PERSONALITY_INSIGHTS_VERSION_DATE,
+            url: PERSONALITY_INSIGHTS_URL,
+            iam_apikey: PERSONALITY_INSIGHTS_KEY
         });
         let params = {
             content: text_data,
@@ -24,7 +29,7 @@ module.exports = {
             if (error)
             console.log('Error:', error);
             else
-            console.log(response.consumption_preferences[0].consumption_preferences);
+            console.log(response);
         });
     }
 }

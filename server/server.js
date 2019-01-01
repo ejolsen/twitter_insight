@@ -3,10 +3,10 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 require('dotenv').config();
-const twitter_api = require('./controllers/twit_ctrl')
+const twitter_api = require('./controllers/twit_ctrl');
 
 // Server Connection
-const { SERVER_PORT } = process.env
+const {SERVER_PORT} = process.env
 app.listen(SERVER_PORT, () => console.log(`Server running on port ${SERVER_PORT}`));
 
 // Twitter API Endpoints

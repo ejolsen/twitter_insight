@@ -16,24 +16,27 @@ class App extends Component {
     };
   };
 
-  // Sets user's Twitter handle to state.
+  // Sets Twitter handle to state.
   twitHandleInput(twitterHandle) {
     this.setState({
       twitHandle: twitterHandle
     });
   };
 
-  // Initiates search and retrieval of user's Tweets.
+  // Initiates search and retrieval of Tweets.
   twitHandleSearch(screenName) {
     const SN = {sn: screenName};
     axios.post(`/api/sn_search`, SN).then( (res) => {
       if(res.data === 'error') {
         console.log('Error: Not a valid Twitter Handle')
-      } else {const profPicURL = res.data[0].user.profile_image_url 
+      } 
+      else {
+        const profPicURL = res.data[0].user.profile_image_url 
         this.modifyProfPicURL(profPicURL);
         this.setState({
           userTweetData: res.data
-        })}
+        })
+      }
     });
   };
 
@@ -50,13 +53,12 @@ class App extends Component {
   render() {
     console.log(this.state.userTweetData)
 
-    // User's profile pic URL
+    // Twitter user's profile picture URL
     const picURL = this.state.userProfilePicURL
 
-    // Maps through user's data returning timeline tweets & related media.
+    // Maps through a user's data returning timeline tweets & related media.
     const timeline_tweets = this.state.userTweetData.map( (tweet, i) => {
       if(tweet.entities.media){
-        // console.log(tweet.entities.media[0].media_url)
         return (
           <div className='app-tweets' key={tweet.id}>
             <div>{tweet.text}</div>

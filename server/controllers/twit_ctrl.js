@@ -9,6 +9,7 @@ const {
 } = process.env
 
 module.exports = {
+    // Method retrieves tweets & data from Twitter API
     retrieve_user_data: (req, res, next) => {
         const twitter_config = {
             consumer_key: TWITTER_CONSUMER_KEY,
