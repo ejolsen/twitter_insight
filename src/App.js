@@ -58,7 +58,7 @@ class App extends Component {
 
     // Maps through a user's data returning timeline tweets & related media.
     const timeline_tweets = this.state.userTweetData.map( (tweet, i) => {
-      if(tweet.entities.media){
+      if(tweet.entities.media) {
         return (
           <div className='app-tweets' key={tweet.id}>
             <div>{tweet.text}</div>

@@ -9,7 +9,7 @@ module.exports = {
     // Method analyzes and returns personality profile using IBM's Personality Insights service
     analyze_user_data: (tweets) => {
         let text_data = ''
-        for(var i = 0; i < tweets.length; i++){
+        for(var i = 0; i < tweets.length; i++) {
             text_data += tweets[i].text
         };
         console.log(text_data)
@@ -29,7 +29,7 @@ module.exports = {
             if (error)
             console.log('Error:', error);
             else
-            console.log(response);
-        });
+            console.log(response)
+        })
     }
 }
