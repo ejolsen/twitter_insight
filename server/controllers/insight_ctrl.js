@@ -5,6 +5,8 @@ const {
     PERSONALITY_INSIGHTS_KEY
 } = process.env
 
+let personality_profile = []
+
 module.exports = { 
     // Method analyzes and returns personality profile using IBM's Personality Insights service
     analyze_user_data: (tweets) => {
@@ -12,7 +14,7 @@ module.exports = {
         for(var i = 0; i < tweets.length; i++) {
             text_data += tweets[i].text
         };
-        console.log(text_data)
+        // console.log(text_data)
         const PersonalityInsightsV3 =require('watson-developer-cloud/personality-insights/v3');
         const personality_insights = new PersonalityInsightsV3({
             version_date: PERSONALITY_INSIGHTS_VERSION_DATE,
@@ -29,7 +31,12 @@ module.exports = {
             if (error)
             console.log('Error:', error);
             else
-            console.log(response)
+            personality_profile.splice(0, 1, response)
+            console.log(personality_profile)
         })
-    }
+    },
+
+    get_personality_profile: (req, res) => {
+        res.status(200).send(personality_profile);
+    },
 }

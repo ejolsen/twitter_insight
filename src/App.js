@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import TwitHandleInput from  './Components/Inputs/TwitHandleInput';
+import TweetsButton from './Components/Buttons/TweetsButton';
 import AnalysisButton from './Components/Buttons/AnalysisButton';
 import axios from 'axios';
 
@@ -9,10 +10,12 @@ class App extends Component {
     super();
     this.twitHandleInput = this.twitHandleInput.bind(this);
     this.twitHandleSearch = this.twitHandleSearch.bind(this);
+    this.getAnalysis = this.getAnalysis.bind(this);
     this.state = {
       twitHandle: null,
       userProfilePicURL: null,
-      userTweetData: []
+      userTweetData: [],
+      personalityProfile: []
     };
   };
 
@@ -29,14 +32,22 @@ class App extends Component {
     axios.post(`/api/sn_search`, SN).then( (res) => {
       if(res.data === 'error') {
         console.log('Error: Not a valid Twitter Handle')
-      } 
-      else {
+      } else {
         const profPicURL = res.data[0].user.profile_image_url 
         this.modifyProfPicURL(profPicURL);
         this.setState({
           userTweetData: res.data
         })
       }
+    });
+  };
+
+  // Retrieves analysis of Tweets returning Personality Profile.
+  getAnalysis() {
+    axios.get(`/api/personality_profile`).then( (res) => {
+      this.setState({
+        personalityProfile: res.data
+      })
     });
   };
 
@@ -51,7 +62,8 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.userTweetData)
+    // console.log(this.state.userTweetData);
+    console.log(this.state.personalityProfile);
 
     // Twitter user's profile picture URL
     const picURL = this.state.userProfilePicURL
@@ -78,7 +90,8 @@ class App extends Component {
         <div className='App-title'>Twitter-Insight Machine</div>
         <div>
           <TwitHandleInput inputValue={this.state.input} handleInput={this.twitHandleInput}/>
-          <AnalysisButton tweetSearch={this.twitHandleSearch} twitScreenName={this.state.twitHandle}/>
+          <TweetsButton tweetSearch={this.twitHandleSearch} twitScreenName={this.state.twitHandle}/>
+          <AnalysisButton analysisReq={this.getAnalysis}/>
         </div>
         <div className='user-profile-info'>
           <img src={picURL} alt='profile pic' height='80%'/>

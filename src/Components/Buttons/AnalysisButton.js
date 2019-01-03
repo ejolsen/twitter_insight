@@ -3,21 +3,20 @@ import React, { Component } from 'react';
 class AnalysisButton extends Component {
     constructor() {
         super();
-        this.initiateTweetSearch = this.initiateTweetSearch.bind(this);
+        this.initiateAnalysisReq = this.initiateAnalysisReq.bind(this);
     };
 
-    initiateTweetSearch() {
-        const sn = this.props.twitScreenName
-        this.props.tweetSearch(sn)
+    initiateAnalysisReq() {
+        this.props.analysisReq()
     };
 
     render() {
         return (
             <button 
                 className='AnalysisButton' 
-                onClick={this.initiateTweetSearch}
+                onClick={this.initiateAnalysisReq}
             >
-                Get Tweets
+                Get Analysis
             </button>
         );
     };
