@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from  './Components/Header/Header';
 import TwitHandleInput from  './Components/Inputs/TwitHandleInput';
 import TweetsButton from './Components/Buttons/TweetsButton';
 import AnalysisButton from './Components/Buttons/AnalysisButton';
@@ -87,7 +88,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className='App-title'>Twitter-Insight Machine</div>
+      <Header/>
         <div>
           <TwitHandleInput inputValue={this.state.input} handleInput={this.twitHandleInput}/>
           <TweetsButton tweetSearch={this.twitHandleSearch} twitScreenName={this.state.twitHandle}/>

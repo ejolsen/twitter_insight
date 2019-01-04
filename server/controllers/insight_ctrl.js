@@ -15,7 +15,7 @@ module.exports = {
             text_data += tweets[i].text
         };
         // console.log(text_data)
-        const PersonalityInsightsV3 =require('watson-developer-cloud/personality-insights/v3');
+        const PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
         const personality_insights = new PersonalityInsightsV3({
             version_date: PERSONALITY_INSIGHTS_VERSION_DATE,
             url: PERSONALITY_INSIGHTS_URL,
@@ -33,10 +33,10 @@ module.exports = {
             else
             personality_profile.splice(0, 1, response)
             console.log(personality_profile)
-        })
+        });
     },
 
     get_personality_profile: (req, res) => {
         res.status(200).send(personality_profile);
-    },
+    }
 }
