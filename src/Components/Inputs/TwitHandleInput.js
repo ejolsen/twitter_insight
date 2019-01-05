@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class InputMain extends Component {
+class TwitHandleInput extends Component {
     constructor() {
         super();
         this.handleLocalInputChange = this.handleLocalInputChange.bind(this);
@@ -12,18 +12,15 @@ class InputMain extends Component {
 
     render() {
         return (
-            <div>
-                <span className='input-at'>@</span>
-                <input 
-                    type='text' 
-                    className='TwitInput-main' 
-                    placeholder='Enter Twitter Handle' 
-                    value={this.props.inputValue} 
-                    onChange={this.handleLocalInputChange}
-                />
-            </div>
+            <input 
+                type='text' 
+                className='TwitInput-main' 
+                placeholder='Enter Twitter Handle' 
+                value={this.props.inputValue} 
+                onChange={this.handleLocalInputChange}
+            />
         );
     };
 };
 
-export default InputMain 
+export default TwitHandleInput 
