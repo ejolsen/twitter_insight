@@ -87,15 +87,17 @@ class App extends Component {
     });
 
     return (
-      <div className="App">
-      <Header/>
-        <div>
-          {/* <TwitHandleInput inputValue={this.state.input} handleInput={this.twitHandleInput}/> */}
-          {/* <TweetsButton tweetSearch={this.twitHandleSearch} twitScreenName={this.state.twitHandle}/> */}
+      <div className='App'>
+        <Header/>
+        {/* <div>
+          <TwitHandleInput inputValue={this.state.input} handleInput={this.twitHandleInput}/>
+          <TweetsButton tweetSearch={this.twitHandleSearch} twitScreenName={this.state.twitHandle}/>
           <AnalysisButton analysisReq={this.getAnalysis}/>
+        </div> */}
+        <div className='app-body'>
+          {this.props.userTweetData[0] ? <TwitterProfile/> : <AppInfo/>}
         </div>
-        {this.props.userTweetData[0] ? <TwitterProfile/> : <AppInfo/>}
-        {timeline_tweets}
+        {/* {timeline_tweets} */}
       </div>
     );
   };

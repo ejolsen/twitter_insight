@@ -15,7 +15,7 @@ class TwitHandleInput extends Component {
             <input 
                 type='text' 
                 className='TwitInput-main' 
-                placeholder='Enter Twitter Handle' 
+                placeholder='@ Enter Twitter Handle' 
                 value={this.props.inputValue} 
                 onChange={this.handleLocalInputChange}
             />
