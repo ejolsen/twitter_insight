@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 15%;
+    height: 14%;
     background-color: rgb(22, 22, 22);
     box-shadow: 0 3px 5px -2px rgb(45, 141, 214);
 }
@@ -39,13 +39,14 @@
     align-items: center;
     width: 50%;
     height: 100%;
+    padding-right: 3%
 }
 
 .TwitInput-main {
     font-family: 'Roboto', sans-serif;
-    height: 40%;
-    width: 45%;
-    font-size: 150%;
+    height: 35%;
+    width: 40%;
+    font-size: 160%;
     color: white;
     background-color: rgb(22, 22, 22);
     outline: none;
@@ -97,8 +98,8 @@
     letter-spacing: 1.5px;
     background-color: #c82291;
     outline: none;
-    width: 25%;
-    height: 40%;
+    width: 20%;
+    height: 35%;
     border: none;
     border-radius: 3px;
     color: rgb(245, 245, 245);
@@ -116,12 +117,73 @@
 
 .twitter-profile-component {
     display: flex;
-    justify-content: flex-start;
-    background-color: #dd219e7e;
+    justify-content: space-evenly;
     width: 80%;
-    height: 70%;
-    border: none;
+    height: 85%;
     border-radius: 3px;
+    background-color: rgb(22, 22, 22);
+}
+
+.twit-prof-comp-pic {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.twit-prof-comp-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left: 4%;
+    width: 96%;
+    height: 100vh;
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+.twit-prof-comp-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 30%;
+}
+
+.twit-prof-comp-right {
+    height: 100%;
+    width: 70%;
+}
+
+.twitter-feed-component {
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.timeline-tweet {
+    width: 95%;
+    height: auto;
+    border-bottom: white 1px solid;
+}
+
+.tweet-text {
+    padding: 3%;
+    font-size: 100%;
+    color: white;
+    width: 95%;
+    height: 30%;
+}
+
+.app-tweets-pics {
+    height: auto;
+    width: 80%;
+    padding: 3%;
+    border-radius: 35px;
 }
 
 .app-info {
@@ -139,19 +201,9 @@
 .app-info-description {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 160%;
+    font-size: 180%;
     line-height: 125%;
     letter-spacing: 1.5px;
-}
-
-.app-tweets {
-    width: 90%;
-    height: auto;
-    color: rgb(84, 216, 22);
-    border-bottom: white 1px solid;
-    border-right: white 1px solid;
-    border-left: white 1px solid;
-    font-size: 18px;
 }
 
 .personality-insights-link {

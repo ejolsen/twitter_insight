@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import TwitHandleInput from  '../Inputs/TwitHandleInput';
-import TweetsButton from '../Buttons/TweetsButton';
 import {connect} from 'react-redux';
-import {getTwitterTimeline} from '../../redux/reducer'
+import {getTwitterTimeline} from '../../redux/reducer';
+import SearchBar from '../Inputs/SearchBar';
+import TweetsButton from '../Buttons/TweetsButton';
 
 class Header extends Component {
     constructor() {
@@ -27,7 +27,7 @@ class Header extends Component {
             <div className='header'>
                 <div className='header-title'>Twitter-Insight Machine</div>
                 <div className='header-search'>
-                    <TwitHandleInput inputValue={this.state.input} handleInput={this.twitHandleInput}/>
+                    <SearchBar inputValue={this.state.input} handleInput={this.twitHandleInput}/>
                     <TweetsButton twitSearch={this.props.getTwitterTimeline} twitterHandle={this.state.twitHandle}/>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class TwitHandleInput extends Component {
+class SearchBar extends Component {
     constructor() {
         super();
         this.handleLocalInputChange = this.handleLocalInputChange.bind(this);
@@ -23,4 +23,4 @@ class TwitHandleInput extends Component {
     };
 };
 
-export default TwitHandleInput 
+export default SearchBar 
