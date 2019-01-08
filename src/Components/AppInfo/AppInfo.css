@@ -1,0 +1,31 @@
+.app-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #dd219e7e;
+    width: 80%;
+    height: 50%;
+    border: none;
+    border-radius: 3px;
+    padding: 3%;
+}
+
+.app-info-description {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 180%;
+    line-height: 125%;
+    letter-spacing: 1.5px;
+}
+
+.personality-insights-link {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: rgb(45, 141, 214);
+}
+
+.twitter-api-link{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: rgb(45, 141, 214);
+}

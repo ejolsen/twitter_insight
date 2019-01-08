@@ -1,3 +1,4 @@
+import './Inputs.css';
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
@@ -14,7 +15,7 @@ class SearchBar extends Component {
         return (
             <input 
                 type='text' 
-                className='TwitInput-main' 
+                className='twitter-search-bar' 
                 placeholder='@ Enter Twitter Handle' 
                 value={this.props.inputValue} 
                 onChange={this.handleLocalInputChange}

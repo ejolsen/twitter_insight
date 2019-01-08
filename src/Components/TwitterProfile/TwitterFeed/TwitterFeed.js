@@ -1,6 +1,6 @@
+import './TwitterFeed.css';
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-// import {getTwitterTimeline} from '../../redux/reducer';
 
 class TwitterFeed extends Component {
     constructor() {
@@ -9,8 +9,8 @@ class TwitterFeed extends Component {
     };
 
     render() {
-        console.log(this.state)
-        console.log(this.props)
+        // console.log(this.state)
+        // console.log(this.props)
 
         // Maps through a user's data returning timeline tweets & related media.
         const timeline = this.props.userTweetData.map( (tweet, i) => {

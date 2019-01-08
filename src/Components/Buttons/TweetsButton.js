@@ -1,3 +1,4 @@
+import './Buttons.css';
 import React, { Component } from 'react';
 
 class TweetsButton extends Component {

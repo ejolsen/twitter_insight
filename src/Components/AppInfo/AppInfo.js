@@ -1,3 +1,4 @@
+import './AppInfo.css'
 import React, { Component } from 'react';
 
 class AppInfo extends Component {

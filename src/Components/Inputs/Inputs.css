@@ -1,0 +1,14 @@
+.twitter-search-bar {
+    font-family: 'Roboto', sans-serif;
+    height: 35%;
+    width: 40%;
+    font-size: 160%;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: #d41d97 solid 1px;
+    caret-color: #d41d97;
+}
