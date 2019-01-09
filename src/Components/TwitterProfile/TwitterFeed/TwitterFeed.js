@@ -1,6 +1,7 @@
 import './TwitterFeed.css';
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import TwitHeader from './TwitHeader'
 
 class TwitterFeed extends Component {
     constructor() {
@@ -23,7 +24,7 @@ class TwitterFeed extends Component {
             )
           } 
           return (    
-            <div className='timeline-tweet'>
+            <div className='timeline-tweet' key={tweet.id}>
                 <div className='tweet-text'>{tweet.text}</div>
             </div>
           )
@@ -31,6 +32,7 @@ class TwitterFeed extends Component {
 
         return (
             <div className='twitter-feed-component'>
+            <TwitHeader/>
                 {timeline}
             </div>
         );

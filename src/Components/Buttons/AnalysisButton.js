@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class AnalysisButton extends Component {
     constructor() {
@@ -7,7 +8,9 @@ class AnalysisButton extends Component {
     };
 
     initiateAnalysisReq() {
-        this.props.analysisReq()
+       axios.get('/api/personality_profile').then( (res) => {
+           console.log(res.data)
+       })
     };
 
     render() {
