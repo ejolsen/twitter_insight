@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {getAnalysis} from '../../redux/reducer';
 
 class InsightsAnalysis extends Component {
     constructor() {
@@ -9,15 +8,15 @@ class InsightsAnalysis extends Component {
     };
 
     componentDidMount() {
-        this.props.getAnalysis();
+        console.log(this.state)
+        console.log(this.props)
     }
 
     render() {
-        // console.log(this.state)
-        // console.log(this.props)
 
         return (
             <div className='personality-insights-comp'>
+            Personality Analysis Here
             </div>
         );
     };
@@ -25,8 +24,8 @@ class InsightsAnalysis extends Component {
 
 function mapStateToProps(state) {
     return {
-        userTweetData: state.userTweetData,
+        personalityProfile: state.personalityProfile
     };
 };
   
-export default connect(mapStateToProps, {getAnalysis})(InsightsAnalysis);
+export default connect(mapStateToProps)(InsightsAnalysis);

@@ -1,5 +1,5 @@
-import './Buttons.css';
 import React, { Component } from 'react';
+import SearchIcon from '../../Images//iconfinder_search_2639914.png'
 
 class TweetsButton extends Component {
     constructor() {
@@ -14,12 +14,13 @@ class TweetsButton extends Component {
 
     render() {
         return (
-            <button 
+            <img 
+                src={SearchIcon}
                 className='TweetsButton' 
+                alt='search_icon'
                 onClick={this.initiateTwitSearch}
-            >
-                Search
-            </button>
+            />
+               
         );
     };
 };

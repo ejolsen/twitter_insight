@@ -1,5 +1,5 @@
 .twitter-feed-component {
-    overflow: scroll;
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -9,6 +9,7 @@
 }
 
 .timeline-tweet {
+    font-family: 'Roboto', sans-serif;
     width: 95%;
     height: auto;
     border-bottom: rgba(179, 179, 179, 0.609) 1px solid;
@@ -17,7 +18,7 @@
 .tweet-text {
     padding: 3%;
     font-size: 100%;
-    color: white;
+    color: black;
     width: 95%;
     height: 30%;
     font-family: 'Roboto', sans-serif;

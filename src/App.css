@@ -1,71 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 
 .App {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: auto;
     width: 100%;
-    background-color: rgb(39, 39, 39);
+    background-color: whitesmoke;
 }
 
-/* width */
 ::-webkit-scrollbar {
-    width: 10px;
-    border: rgb(39, 39, 39)
+    display:none;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-    background:  rgb(53, 53, 53);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgb(45, 141, 214);
-    height: 100px;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(45, 141, 214)
-}
-
-::placeholder {
-    color: rgb(245, 245, 245);;
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: rgb(245, 245, 245);;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-   color: rgb(245, 245, 245);;
-}
-
-/* .TweetsButton {
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 1.5px;
-    background-color: #c82291;
-    outline: none;
-    width: 20%;
-    height: 35%;
-    border: none;
-    border-radius: 3px;
-    color: rgb(245, 245, 245);
-    font-size: 120%;
-} */
 
 .app-body {
-    height: 88%;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 

@@ -1,7 +1,6 @@
 import './TwitterFeed.css';
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import TwitHeader from './TwitHeader'
 
 class TwitterFeed extends Component {
     constructor() {
@@ -10,9 +9,6 @@ class TwitterFeed extends Component {
     };
 
     render() {
-        // console.log(this.state)
-        // console.log(this.props)
-
         // Maps through a user's data returning timeline tweets & related media.
         const timeline = this.props.userTweetData.map( (tweet, i) => {
           if(tweet.entities.media) {
@@ -32,7 +28,6 @@ class TwitterFeed extends Component {
 
         return (
             <div className='twitter-feed-component'>
-            <TwitHeader/>
                 {timeline}
             </div>
         );
