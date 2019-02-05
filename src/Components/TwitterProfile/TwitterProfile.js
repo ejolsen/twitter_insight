@@ -58,7 +58,6 @@ class TwitterProfile extends Component {
     };
 
     componentDidUpdate(prevProps) {
-         console.log(this.props);
         if (this.props.userTweetData[0] !== prevProps.userTweetData[0]) {
             // Set guaranteed data to State.
             let profPicURL = this.props.userTweetData[0].user.profile_image_url
@@ -101,7 +100,6 @@ class TwitterProfile extends Component {
     };
 
     render() {
-        console.log(this.state);
         let {profileName, twitterHandle, membershipDate, urlDescription, description, location, urlLink} = this.state;
         
         return (

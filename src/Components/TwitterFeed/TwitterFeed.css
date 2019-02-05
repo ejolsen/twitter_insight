@@ -15,6 +15,12 @@
     border-bottom: rgba(179, 179, 179, 0.609) 1px solid;
 }
 
+.timeline-tweet-info {
+    display: flex;
+    /* overflow: hidden; */
+    /* width: 100% */
+}
+
 .tweet-text {
     padding: 3%;
     font-size: 100%;
