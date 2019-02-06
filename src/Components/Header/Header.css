@@ -31,10 +31,6 @@
 }
 
 .TweetsButton {
-    /* background-color: black;
-    border: none;
-    border-radius: 3px;
-    color: rgb(245, 245, 245); */
     position: absolute;
     left: 88%;
 }
@@ -51,11 +47,9 @@
     border-radius: 21px;
     border: 1px solid #e6ecf0;
     outline: none;
-    
 }
 
 .twitter-search-bar:focus {
     outline: none;
     border: 1.5px solid rgb(45, 141, 214);
-    
 }

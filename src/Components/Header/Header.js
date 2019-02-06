@@ -24,7 +24,7 @@ class Header extends Component {
     render() {
         return (
             <div className='header'>
-                <div className='header-title'>Twitter Analyst</div>
+                <div className='header-title'>Twitter-Insights</div>
                 <div className='header-search'>
                     <SearchBar twitSearch={this.props.getTwitterTimeline} twitterHandle={this.state.twitHandle} inputValue={this.state.input} handleInput={this.twitHandleInput}/>
                     <TweetsButton twitSearch={this.props.getTwitterTimeline} twitterHandle={this.state.twitHandle}/>

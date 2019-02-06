@@ -7,7 +7,23 @@
     align-items: center;
 }
 
-.prof-menu-butt {
+.prof-menu-button-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     font: 14px;
+    border-right: solid gray 1px;
+    width: 50%;
+    height: 100%;
+}
+
+.prof-menu-button-analysis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font: 14px;
+    width: 50%;
+    height: 100%;
 }

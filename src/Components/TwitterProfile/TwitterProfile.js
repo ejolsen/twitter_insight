@@ -1,6 +1,6 @@
 import './TwitterProfile.css';
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import CalendarIcon from '../../Images/iconfinder_icon-calendar_211633.png';
 import LocationIcon from '../../Images/iconfinder_94_171453 (1).png';
 import LinkIcon from '../../Images/iconfinder_link5_216660.png';
@@ -32,7 +32,6 @@ class TwitterProfile extends Component {
             this.setState({
                 profileName: this.props.userTweetData[0].user.name,
                 twitterHandle: this.props.userTweetData[0].user.screen_name,
-                // membershipDate: this.props.userTweetData[0].user.created_at,
                 usersTotalFollowers: this.props.userTweetData[0].user.followers_count,
                 numUserIsFollowing: this.props.userTweetData[0].user.friends_count
             })
@@ -69,7 +68,6 @@ class TwitterProfile extends Component {
             this.setState({
                 profileName: this.props.userTweetData[0].user.name,
                 twitterHandle: this.props.userTweetData[0].user.screen_name,
-                // membershipDate: this.props.userTweetData[0].user.created_at,
                 usersTotalFollowers: this.props.userTweetData[0].user.followers_count,
                 numUserIsFollowing: this.props.userTweetData[0].user.friends_count
             })
@@ -103,7 +101,7 @@ class TwitterProfile extends Component {
         });
     };
 
-    // Formats Twitter user's membership date to MMM/DD/YYYY
+    // Formats Twitter user's membership date to MMM/DD/YYYY.
     formatMembershipDate(date) {
         let splitDate = date.split('')
         let spliceDateElements = splitDate.splice(0, 4)

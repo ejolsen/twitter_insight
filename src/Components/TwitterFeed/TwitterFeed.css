@@ -31,21 +31,36 @@
 
 .timeline-tweet-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     margin-left: 2%;
     margin-top: 3%;
     font-size: 90%;
-    width: 90%;
-    /* overflow: hidden; */
+    width: 95%;
+    text-overflow: ellipsis;
     /* width: 100% */
 }
 
 .timeline-tweet-info-name {
+    display: flex;
+    align-items: center;
     font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 3%;
+    white-space: nowrap;
+}
+
+.timeline-tweet-info-name-badge {
+    margin-left: 2px;
 }
 
 .timeline-tweet-info-scr-name {
     color: rgb(73, 73, 73);
+    font-family: 'Roboto', sans-serif;
+    margin-right: 3%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .timeline-tweet-info-date {
@@ -59,6 +74,16 @@
     width: 95%;
     height: auto;
     font-family: 'Roboto', sans-serif;
+}
+
+.quoted-tweet {
+    height: auto;
+    width: 80%;
+    margin-bottom: 3%;
+    padding: 3%;
+    margin-left: 5%;
+    border-radius: 15px;
+    border: rgba(179, 179, 179, 0.609) 1px solid;
 }
 
 .app-tweets-pics {

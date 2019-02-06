@@ -19,7 +19,7 @@ module.exports = {
         };
         const twit = new twitter(twitter_config);
         const screen_name = req.body.sn
-        twit.get(`statuses/user_timeline.json?count=100`, {screen_name: screen_name}, function(error, tweets) {
+        twit.get(`statuses/user_timeline.json?count=100`, {screen_name: screen_name, tweet_mode: 'extended'}, function(error, tweets) {
             if (error) {
                 console.log(error);
                 res.send('error')
