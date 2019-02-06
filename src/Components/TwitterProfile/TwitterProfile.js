@@ -26,11 +26,13 @@ class TwitterProfile extends Component {
         // Set guaranteed data to State.
         if(this.props.userTweetData[0]) {
             let profPicURL = this.props.userTweetData[0].user.profile_image_url
+            let membershipDate = this.props.userTweetData[0].user.created_at
             this.modifyProfPicURL(profPicURL)
+            this.formatMembershipDate(membershipDate)
             this.setState({
                 profileName: this.props.userTweetData[0].user.name,
                 twitterHandle: this.props.userTweetData[0].user.screen_name,
-                membershipDate: this.props.userTweetData[0].user.created_at,
+                // membershipDate: this.props.userTweetData[0].user.created_at,
                 usersTotalFollowers: this.props.userTweetData[0].user.followers_count,
                 numUserIsFollowing: this.props.userTweetData[0].user.friends_count
             })
@@ -61,11 +63,13 @@ class TwitterProfile extends Component {
         if (this.props.userTweetData[0] !== prevProps.userTweetData[0]) {
             // Set guaranteed data to State.
             let profPicURL = this.props.userTweetData[0].user.profile_image_url
+            let membershipDate = this.props.userTweetData[0].user.created_at
+            this.formatMembershipDate(membershipDate)
             this.modifyProfPicURL(profPicURL)
             this.setState({
                 profileName: this.props.userTweetData[0].user.name,
                 twitterHandle: this.props.userTweetData[0].user.screen_name,
-                membershipDate: this.props.userTweetData[0].user.created_at,
+                // membershipDate: this.props.userTweetData[0].user.created_at,
                 usersTotalFollowers: this.props.userTweetData[0].user.followers_count,
                 numUserIsFollowing: this.props.userTweetData[0].user.friends_count
             })
@@ -99,7 +103,19 @@ class TwitterProfile extends Component {
         });
     };
 
+    // Formats Twitter user's membership date to MMM/DD/YYYY
+    formatMembershipDate(date) {
+        let splitDate = date.split('')
+        let spliceDateElements = splitDate.splice(0, 4)
+        let spliceElementsAgain = splitDate.splice(7, 15)
+        let formattedMemberDate = splitDate.join('')
+        return this.setState({
+            membershipDate: formattedMemberDate
+        })
+    }
+
     render() {
+        console.log(this.state)
         let {profileName, twitterHandle, membershipDate, urlDescription, description, location, urlLink} = this.state;
         
         return (
@@ -118,7 +134,7 @@ class TwitterProfile extends Component {
                         </div>
                         <div className='twit-prof-etc-div'>
                             <img src={LinkIcon} alt='link_icon'/>
-                            <a href={urlLink} target='_blank' rel="noopener noreferrer"><div id='twit-prof-etc-txt'>{urlDescription}</div></a>
+                            <a href={urlLink} target='_blank' rel="noopener noreferrer"><div id='twit-prof-etc-url'>{urlDescription}</div></a>
                         </div>
                         <div className='twit-prof-etc-div'>
                             <img src={CalendarIcon} alt='calendar_icon'/>
