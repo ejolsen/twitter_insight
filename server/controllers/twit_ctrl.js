@@ -24,7 +24,7 @@ module.exports = {
                 console.log(error);
                 res.send('error')
             } else {
-                // insight_api.analyze_user_data(tweets);
+                insight_api.analyze_user_data(tweets);
                 res.status(200).send(tweets);
             }
         });

@@ -11,6 +11,10 @@
     background-color: whitesmoke;
 }
 
+.App-Container {
+    width: 100%;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

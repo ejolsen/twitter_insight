@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <Header />
         {this.props.userTweetData[0] ? (
-          <div>
+          <div className="App-Container">
             <TwitterProfile /> <ProfileMenu />
             {this.props.insightsComponentSwitch ? (
               <InsightsAnalysis />

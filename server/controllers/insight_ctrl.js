@@ -12,9 +12,9 @@ module.exports = {
     analyze_user_data: (tweets) => {
         let text_data = ''
         for(var i = 0; i < tweets.length; i++) {
-            text_data += tweets[i].text
+            text_data += tweets[i].full_text
         };
-        // console.log(text_data)
+        console.log(text_data)
         const PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
         const personality_insights = new PersonalityInsightsV3({
             version_date: PERSONALITY_INSIGHTS_VERSION_DATE,
